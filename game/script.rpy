@@ -98,16 +98,17 @@ label ch1_sc2:
             jump checkout
 
 label checkout:
-    cost = 0
-    for item in cart:
-        s "Here's your [item]. It costs [stock[item]]."
-        cost += stock[item]
+    python:
+        cost = 0
+        for item in cart:
+            s "Here's your [item]. It costs [stock[item]] dollars."
+            cost += stock[item]
 
     menu payment:
         s "In total, these cost [cost] dollars. Would you like to pay in cash, or with credit card?"
 
         "Cash":
-            "{i}You hand a [10 if cost > 5 else 5] dollar bill.{/i}"
+            "{i}You hand a [10 if cost > 5 else 5] dollar bill to the shopkeeper.{/i}"
             s "Here's your change."
             "{i}The shopkeeper returns [amt - cost] dollars to you.{/i}"
         "Card":

@@ -2,17 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 101: expected statement.
-    cost = 0
-         ^
-
-File "game/script.rpy", line 102: expected statement.
-    for item in cart:
-             ^
-
-File "game/script.rpy", line 110: expected statement.
-    amt = 0
-        ^
+File "game/script.rpy", line 104: invalid syntax
+        s "Here's your [item]. It costs [stock[item]] dollars."
+                                                               ^
+    
 
 Ren'Py Version: Ren'Py 7.4.9.2142
-Tue Oct 19 17:22:30 2021
+Tue Oct 19 18:35:16 2021
