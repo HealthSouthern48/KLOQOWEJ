@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 43, in script
+    menu buy_groceries:
+  File "game/script.rpy", line 46, in <module>
+    "[stock[0]!c]" if not lettuce:
+NameError: name 'lettuce' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 43, in script
+    menu buy_groceries:
+  File "/Applications/renpy-7.4.8-sdk/renpy/ast.py", line 1688, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "/Applications/renpy-7.4.8-sdk/renpy/exports.py", line 1028, in menu
+    condition = renpy.python.py_eval(condition)
+  File "/Applications/renpy-7.4.8-sdk/renpy/python.py", line 2276, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Applications/renpy-7.4.8-sdk/renpy/python.py", line 2269, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 46, in <module>
+    "[stock[0]!c]" if not lettuce:
+NameError: name 'lettuce' is not defined
+
+Darwin-20.6.0-x86_64-i386-64bit
+Ren'Py 7.4.9.2142
+KLOQOWEJ 1.0
+Tue Oct 19 05:15:10 2021
