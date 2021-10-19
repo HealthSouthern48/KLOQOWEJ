@@ -107,9 +107,7 @@ label checkout:
         s "In total, these cost [cost] dollars. Would you like to pay in cash, or with credit card?"
 
         "Cash":
-            amt = 0
-            # TODO: calculate payment
-            "{i}You hand a [amt] dollar bill.{/i}"
+            "{i}You hand a [10 if cost > 5 else 5] dollar bill.{/i}"
             s "Here's your change."
             "{i}The shopkeeper returns [amt - cost] dollars to you.{/i}"
         "Card":
