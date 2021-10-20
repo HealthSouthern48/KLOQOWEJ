@@ -26,8 +26,8 @@ label chapter_01:
 
 # scene 1: At the shop
 label at_shop:
-# background image: Store scene
-scene bg store
+    # background image: Store scene
+    scene bg store
     show s smile
 
     menu:
@@ -42,11 +42,13 @@ scene bg store
         s "I'm glad to hear that!"
         s "Let's get you some veggies to stay healthy."
     else:
+        show s concern
         s "Oh, I'm sorry to hear that."
         s "Maybe some fresh veggies can brighten your mood."
 
 # scene 2: Picking groceries
 label pick_items:
+    show s smile
     menu buy_groceries:
         s "{cps=0}What [passed_say]can I get you today?{/cps}"
 
