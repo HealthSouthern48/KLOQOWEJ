@@ -93,6 +93,9 @@ label pick_items:
 
         "Yes":
             if nothing:
+                if len(cart) == 4:
+                    s "Sorry, we're out of stock. Please come by later for more fresh produce."
+                    jump checkout
                 s "Ok, then."
 
                 if len(cart) == 0:
