@@ -113,16 +113,16 @@ label checkout:
     $ cost = 0
     while len(cart) > 0:
         $ item = cart.pop(0)
-        s "Here's your [item]. It costs [stock[item]:.2] dollars."
+        s "Here's your [item]. It costs [stock[item]:.2f] dollars."
         $ cost += stock[item]
 
     menu payment:
-        s "In total, these cost [cost:.2] dollars. Would you like to pay in cash, or with credit card?"
+        s "In total, these cost [cost:.2f] dollars. Would you like to pay in cash, or with credit card?"
 
         "Cash":
             "{i}You hand a [10 if cost > 5 else 5] dollar bill to the shopkeeper.{/i}"
             s "Here's your change."
-            "{i}The shopkeeper returns [(amt - cost):.2] dollars to you.{/i}"
+            "{i}The shopkeeper returns [(amt - cost):.2f] dollars to you.{/i}"
         "Card":
             "{i}You swipe the card at the POS terminal.{p}\nThe machine beeps and accepts your payment.{/i}"
 
