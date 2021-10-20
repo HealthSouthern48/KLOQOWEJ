@@ -3,6 +3,11 @@ define s = Character("Shopkeeper")
 
 # character animation
 image shopkeeper happy:
+    "s smile"
+    pause 6
+    "s blink"
+    pause 0.25
+    repeat
 
 # default values
 default player_name = "Player"
