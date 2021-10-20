@@ -57,7 +57,6 @@ label at_shop:
 
 # scene 2: Picking groceries
 label pick_items:
-    show shopkeeper happy
 
     menu buy_groceries:
         s "{cps=0}What [passed_say]can I get you today?{/cps}"
@@ -136,5 +135,7 @@ label checkout:
 # end script
 label end:
     s "Have a nice day, [name]. {p}Come again!"
+
+    hide shopkeeper happy
 
     return
