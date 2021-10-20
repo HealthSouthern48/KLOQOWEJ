@@ -96,6 +96,8 @@ label pick_items:
 
             jump checkout
 
+scene bg counter
+
 label checkout:
     $ cost = 0
     while len(cart) > 0:
