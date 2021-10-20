@@ -7,8 +7,7 @@ default passed_say = ""
 default nothing = False
 default last_say = "Anything else on your list?"
 default stock = {"lettuce": 1.25, "cucumber": 1.50, "spinach": 0.75, "bread": 1.75}
-default items = ["lettuce", "cucumber", "spinach", "bread"]
-#default items = stock.keys()
+default items = stock.keys()
 default lettuce = False
 default cucumber = False
 default spinach = False
@@ -20,14 +19,14 @@ label start:
     "Project KLOQOWEJ{p}\nby Isaiah, Jacob, Kyle, Naziya, Sheikh"
 
 # chapter 1: Grocery Shopping
-label ch1_start:
+label chapter_01:
     python:
         name = renpy.input("Hello, what is your name?").strip() or player_name
 
     "Welcome, [name]!{p}\nI hope you enjoy the game."
 
 # scene 1: At the shop
-label ch1_sc1:
+label at_shop:
     menu:
         s "{cps=0}How are you feeling, [name]?{/cps}"
 
@@ -44,7 +43,7 @@ label ch1_sc1:
         s "Maybe some fresh veggies can brighten your mood."
 
 # scene 2: Picking groceries
-label ch1_sc2:
+label pick_items:
     menu buy_groceries:
         s "{cps=0}What [passed_say]can I get you today?{/cps}"
 
