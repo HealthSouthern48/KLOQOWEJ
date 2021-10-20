@@ -15,10 +15,7 @@ default bread = False
 default cart = []
 
 # background image: Store scene
-show bg store:
-    crop(0, 0, 800, 600)
-    size(1280, 720)
-    linear crop(0, 0, 0, 0)
+scene bg store
 
 # intro block
 label start:
