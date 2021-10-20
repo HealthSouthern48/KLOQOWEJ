@@ -121,8 +121,8 @@ label checkout:
         s "In total, these cost [cost:.2f] dollars. Would you like to pay in cash, or with credit card?"
 
         "Cash":
-            $ amt =10 if cost > 5 else 5
-            "{i}You hand a [] dollar bill to the shopkeeper.{/i}"
+            $ amt = 10 if cost > 5 else 5
+            "{i}You hand a [amt] dollar bill to the shopkeeper.{/i}"
             s "Here's your change."
             "{i}The shopkeeper returns [(amt - cost):.2f] dollars to you.{/i}"
         "Card":
