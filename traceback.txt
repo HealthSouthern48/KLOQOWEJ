@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 124, in script
-    "{i}You hand a [10 if cost > 5 else 5] dollar bill to the shopkeeper.{/i}"
-KeyError: u'10 if cost > 5 else 5'
+  File "game/script.rpy", line 129, in script
+    "{i}The shopkeeper returns [(amt - cost):.2f] dollars to you.{/i}"
+KeyError: u'(amt - cost)'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 124, in script
-    "{i}You hand a [10 if cost > 5 else 5] dollar bill to the shopkeeper.{/i}"
+  File "game/script.rpy", line 129, in script
+    "{i}The shopkeeper returns [(amt - cost):.2f] dollars to you.{/i}"
   File "/Applications/renpy-7.4.8-sdk/renpy/ast.py", line 721, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "/Applications/renpy-7.4.8-sdk/renpy/exports.py", line 1417, in say
@@ -26,9 +26,9 @@ Full traceback:
   File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 585, in _vformat
   File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 646, in get_field
   File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 605, in get_value
-KeyError: u'10 if cost > 5 else 5'
+KeyError: u'(amt - cost)'
 
 Darwin-20.6.0-x86_64-i386-64bit
 Ren'Py 7.4.9.2142
 KLOQOWEJ 1.0
-Wed Oct 20 06:28:56 2021
+Wed Oct 20 06:31:35 2021

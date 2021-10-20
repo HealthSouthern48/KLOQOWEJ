@@ -126,7 +126,8 @@ label checkout:
             $ amt = 10 if cost > 5 else 5
             "{i}You hand a [amt] dollar bill to the shopkeeper.{/i}"
             s "Here's your change."
-            "{i}The shopkeeper returns [(amt - cost):.2f] dollars to you.{/i}"
+            $ amt -= cost
+            "{i}The shopkeeper returns [amt:.2f] dollars to you.{/i}"
         "Card":
             "{i}You swipe the card at the POS terminal.{p}\nThe machine beeps and accepts your payment.{/i}"
 
