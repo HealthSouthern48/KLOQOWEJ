@@ -109,7 +109,9 @@ label pick_items:
             jump checkout
 
 label checkout:
+    hide bg store
     scene bg counter
+
     $ cost = 0
     while len(cart) > 0:
         $ item = cart.pop(0)
