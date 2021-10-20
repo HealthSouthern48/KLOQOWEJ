@@ -7,7 +7,6 @@ default passed_say = ""
 default nothing = False
 default last_say = "Anything else on your list?"
 default stock = {"lettuce": 1.25, "cucumber": 1.50, "spinach": 0.75, "bread": 1.75}
-default items = list(stock.keys())
 default lettuce = False
 default cucumber = False
 default spinach = False
@@ -50,17 +49,17 @@ label pick_items:
     menu buy_groceries:
         s "{cps=0}What [passed_say]can I get you today?{/cps}"
 
-        "[items[0]!c]" if not lettuce:
-            $ cart.append(items[0])
+        "Lettuce" if not lettuce:
+            $ cart.append("lettuce")
             $ lettuce = True
-        "[items[1]!c]" if not cucumber:
-            $ cart.append(items[1])
+        "Cucumber" if not cucumber:
+            $ cart.append("cucumber")
             $ cucumber = True
-        "[items[2]!c]" if not spinach:
-            $ cart.append(items[2])
+        "Spinach" if not spinach:
+            $ cart.append("spinach")
             $ spinach = True
-        "[items[3]!c]" if not bread:
-            $ cart.append(items[3])
+        "Bread" if not bread:
+            $ cart.append("bread")
             $ bread = True
         "Nothing":
             python:
