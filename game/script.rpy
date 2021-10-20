@@ -138,4 +138,6 @@ label end:
 
     hide shopkeeper happy
 
+    "{b}{i}The End{/i}{/b}"
+
     return
