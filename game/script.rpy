@@ -57,10 +57,10 @@ label at_shop:
         s "I'm glad to hear that!"
         s "Let's get you some veggies to stay healthy."
     else:
-        show s concern at left
+        show shopkeeper worry at left
         s "Oh, I'm sorry to hear that."
         s "Maybe some fresh veggies can brighten your mood."
-        hide s concern
+        hide shopkeeper worry
 
 # scene 2: Picking groceries
 label pick_items:
