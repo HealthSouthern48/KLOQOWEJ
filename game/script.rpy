@@ -29,7 +29,8 @@ label chapter_01:
 
 # scene 1: At the shop
 label at_shop:
-    show s smile at center
+    show s smile
+
     menu:
         s "{cps=0}How are you feeling, [name]?{/cps}"
 
