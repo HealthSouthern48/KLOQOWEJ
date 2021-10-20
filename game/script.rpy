@@ -1,6 +1,9 @@
 # primary NPC to converse with
 define s = Character("Shopkeeper")
 
+# character animation
+image shopkeeper happy:
+
 # default values
 default player_name = "Player"
 default passed_say = ""
