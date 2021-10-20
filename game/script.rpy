@@ -57,6 +57,7 @@ label at_shop:
         s "I'm glad to hear that!"
         s "Let's get you some veggies to stay healthy."
     else:
+        hide shopkeeper happy
         show shopkeeper worry at left
         s "Oh, I'm sorry to hear that."
         s "Maybe some fresh veggies can brighten your mood."
@@ -64,6 +65,7 @@ label at_shop:
 
 # scene 2: Picking groceries
 label pick_items:
+    show shopkeeper happy at left
 
     menu buy_groceries:
         s "{cps=0}What [passed_say]can I get you today?{/cps}"
