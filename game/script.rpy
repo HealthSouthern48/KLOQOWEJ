@@ -113,7 +113,8 @@ label checkout:
     $ cost = 0
     while len(cart) > 0:
         $ item = cart.pop(0)
-        s "Here's your [item]. It costs [stock[item]:.2f] dollars."
+        $ price = stock[item]
+        s "Here's your [item]. It costs [price:.2f] dollars."
         $ cost += stock[item]
 
     menu payment:
