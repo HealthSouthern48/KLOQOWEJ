@@ -111,6 +111,7 @@ label pick_items:
 label checkout:
     hide bg store
     scene bg counter
+    show shopkeeper happy
 
     $ cost = 0
     while len(cart) > 0:
