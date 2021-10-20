@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 108, in script
-    s "Here's your [item]. It costs [stock[item]] dollars."
+  File "game/script.rpy", line 116, in script
+    s "Here's your [item]. It costs [stock[item]:.2f] dollars."
 KeyError: u'item'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 108, in script
-    s "Here's your [item]. It costs [stock[item]] dollars."
+  File "game/script.rpy", line 116, in script
+    s "Here's your [item]. It costs [stock[item]:.2f] dollars."
   File "/Applications/renpy-7.4.8-sdk/renpy/ast.py", line 721, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "/Applications/renpy-7.4.8-sdk/renpy/exports.py", line 1417, in say
@@ -30,4 +30,4 @@ KeyError: u'item'
 Darwin-20.6.0-x86_64-i386-64bit
 Ren'Py 7.4.9.2142
 KLOQOWEJ 1.0
-Wed Oct 20 06:11:00 2021
+Wed Oct 20 06:19:34 2021
