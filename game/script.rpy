@@ -36,7 +36,7 @@ label chapter_01:
 label at_shop:
     # background image: Store scene
     scene bg store
-    show s smile
+    show shopkeeper happy
 
     menu:
         s "{cps=0}How are you feeling, [name]?{/cps}"
@@ -56,7 +56,7 @@ label at_shop:
 
 # scene 2: Picking groceries
 label pick_items:
-    show s smile
+    show shopkeeper happy
     menu buy_groceries:
         s "{cps=0}What [passed_say]can I get you today?{/cps}"
 
