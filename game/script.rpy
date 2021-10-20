@@ -53,10 +53,12 @@ label at_shop:
         show s concern
         s "Oh, I'm sorry to hear that."
         s "Maybe some fresh veggies can brighten your mood."
-        show shopkeeper happy
+        hide s concern
 
 # scene 2: Picking groceries
 label pick_items:
+    show shopkeeper happy
+
     menu buy_groceries:
         s "{cps=0}What [passed_say]can I get you today?{/cps}"
 
