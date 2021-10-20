@@ -109,7 +109,6 @@ label pick_items:
             jump checkout
 
 label checkout:
-    hide bg store
     scene bg counter
     show shopkeeper happy
 
