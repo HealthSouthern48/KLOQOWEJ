@@ -1,3 +1,5 @@
-# Project KLOQOWEJ
+# Project KLOQOWEJ Prototype
 
-Mi'kmaq Language Learning App
+Fun, engaging and interactive app for kids to learn the Mi'kmaq language.
+
+***Please be aware that this is just a prototype and does not represent the final product.***
