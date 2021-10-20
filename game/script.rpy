@@ -13,9 +13,6 @@ default spinach = False
 default bread = False
 default cart = []
 
-# background image: Store scene
-scene bg store
-
 # intro block
 label start:
     "Project KLOQOWEJ{p}\nby Isaiah, Jacob, Kyle, Naziya, Sheikh"
@@ -29,6 +26,8 @@ label chapter_01:
 
 # scene 1: At the shop
 label at_shop:
+# background image: Store scene
+scene bg store
     show s smile
 
     menu:
