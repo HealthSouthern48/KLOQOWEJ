@@ -3,12 +3,11 @@ define s = Character("Shopkeeper")
 
 # default values
 default player_name = "Player"
-default passed = False
 default passed_say = ""
 default nothing = False
 default last_say = "Anything else on your list?"
 default stock = {"lettuce": 1.25, "cucumber": 1.50, "spinach": 0.75, "bread": 1.75}
-default items = stock.keys()
+#default items = stock.keys()
 default lettuce = False
 default cucumber = False
 default spinach = False
@@ -17,7 +16,7 @@ default cart = []
 
 # intro block
 label start:
-    "Project KLOQOWEJ{p}\nIsaiah, Jacob, Kyle, Naziya, Sheikh"
+    "Project KLOQOWEJ{p}\nby Isaiah, Jacob, Kyle, Naziya, Sheikh"
 
 # chapter 1: Grocery Shopping
 label ch1_start:
@@ -45,6 +44,8 @@ label ch1_sc1:
 
 # scene 2: Picking groceries
 label ch1_sc2:
+    $ items = stock.keys()
+
     menu buy_groceries:
         s "{cps=0}What [passed_say]can I get you today?{/cps}"
 
@@ -65,9 +66,7 @@ label ch1_sc2:
                 nothing = True
                 last_say = "Are you sure?"
 
-    python:
-        passed = len(cart) > 0
-        if passed: passed_say = "else "
+    $ if len(cart) > 0: passed_say = "else "
 
     menu last:
         s "{cps=0}[last_say]{/cps}"
@@ -98,19 +97,19 @@ label ch1_sc2:
             jump checkout
 
 label checkout:
-    python:
-        cost = 0
-        for item in cart:
-            s "Here's your [item]. It costs [stock[item]] dollars."
-            cost += stock[item]
+    $ cost = 0
+    while len(cart) > 0:
+        $ item = cart.pop(0)
+        s "Here's your [item]. It costs [stock[item]:.2] dollars."
+        $ cost += stock[item]
 
     menu payment:
-        s "In total, these cost [cost] dollars. Would you like to pay in cash, or with credit card?"
+        s "In total, these cost [cost:.2] dollars. Would you like to pay in cash, or with credit card?"
 
         "Cash":
             "{i}You hand a [10 if cost > 5 else 5] dollar bill to the shopkeeper.{/i}"
             s "Here's your change."
-            "{i}The shopkeeper returns [amt - cost] dollars to you.{/i}"
+            "{i}The shopkeeper returns [(amt - cost):.2] dollars to you.{/i}"
         "Card":
             "{i}You swipe the card at the POS terminal.{p}\nThe machine beeps and accepts your payment.{/i}"
 
