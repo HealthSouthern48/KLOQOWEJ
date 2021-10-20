@@ -7,6 +7,7 @@ default passed_say = ""
 default nothing = False
 default last_say = "Anything else on your list?"
 default stock = {"lettuce": 1.25, "cucumber": 1.50, "spinach": 0.75, "bread": 1.75}
+default items = ["lettuce", "cucumber", "spinach", "bread"]
 #default items = stock.keys()
 default lettuce = False
 default cucumber = False
@@ -44,8 +45,6 @@ label ch1_sc1:
 
 # scene 2: Picking groceries
 label ch1_sc2:
-    $ items = stock.keys()
-
     menu buy_groceries:
         s "{cps=0}What [passed_say]can I get you today?{/cps}"
 
@@ -76,7 +75,7 @@ label ch1_sc2:
                 s "Ok, then."
 
                 if len(cart) == 0:
-                    extend "See you later."
+                    extend " See you later."
                     jump end
 
                 jump checkout
