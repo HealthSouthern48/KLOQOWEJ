@@ -115,7 +115,9 @@ label pick_items:
 
             jump checkout
 
+# scene 3: Checking out
 label checkout:
+    # change background
     scene bg counter
     show shopkeeper happy at left
 
