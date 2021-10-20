@@ -14,6 +14,12 @@ default spinach = False
 default bread = False
 default cart = []
 
+# background image: Store scene
+show bg store:
+    crop(0, 0, 800, 600)
+    size(1280, 720)
+    linear crop(0, 0, 0, 0)
+
 # intro block
 label start:
     "Project KLOQOWEJ{p}\nby Isaiah, Jacob, Kyle, Naziya, Sheikh"
