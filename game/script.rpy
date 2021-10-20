@@ -36,7 +36,7 @@ label chapter_01:
 label at_shop:
     # background image: Store scene
     scene bg store
-    show shopkeeper happy
+    show shopkeeper happy at left
 
     menu:
         s "{cps=0}How are you feeling, [name]?{/cps}"
@@ -50,7 +50,7 @@ label at_shop:
         s "I'm glad to hear that!"
         s "Let's get you some veggies to stay healthy."
     else:
-        show s concern
+        show s concern at left
         s "Oh, I'm sorry to hear that."
         s "Maybe some fresh veggies can brighten your mood."
         hide s concern
