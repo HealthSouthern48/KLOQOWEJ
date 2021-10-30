@@ -96,6 +96,7 @@ label pick_items:
                 s "Ok, then."
 
                 if len(cart) == 0:
+                    show shopkeeper happy at left
                     extend " See you later."
                     jump end
 
