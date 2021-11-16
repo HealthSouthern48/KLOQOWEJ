@@ -1,0 +1,44 @@
+Player
+Shopkeeper
+
+Hello, what is your name?
+Welcome, [name]! I hope you enjoy the game.
+
+How are you feeling, [name]?
+I'm fine. Thank you.
+I'm not feeling too well.
+
+I'm glad to hear that!
+Let's get you some veggies to stay healthy.
+
+Oh, I'm sorry to hear that.
+Maybe some fresh veggies can brighten your mood.
+
+What can I get you today?
+What more can I get you today?
+
+Nothing.
+Are you sure?
+
+Yes.
+No.
+
+Ok, then.
+See you later.
+Let's see what I can get you.
+Anything else on your list?
+Sorry, we're out of stock.
+Please come by later for more fresh produce.
+
+Here's your [item]. It costs [price] dollars.
+In total, these cost [cost] dollars. Would you like to pay in cash, or with credit card?
+Cash.
+The shopkeeper returns [amount] dollars to you.
+Credit Card.
+You swipe the credit card at the POS terminal.
+The machine beeps and accepts your payment.
+Here's your receipt.
+
+Have a nice day, [name].
+Come again!
+The End

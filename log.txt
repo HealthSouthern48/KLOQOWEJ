@@ -1,4 +1,4 @@
-Sat Oct 30 20:56:04 2021
+Sat Nov 13 18:05:19 2021
 Darwin-21.1.0-x86_64-i386-64bit
 Ren'Py 7.4.9.2142
  
@@ -7,7 +7,7 @@ Bootstrap to the start of init.init took 0.11s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.08s
+Loading script took 0.09s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -30,28 +30,3 @@ Save screen analysis took 0.00s
 Prepare screens took 0.07s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.22s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Apple'
-Renderer: 'Apple M1'
-Version: '2.1 Metal - 76.1'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1389, 768) drawable=(2778, 1536)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1440, 768) drawable=(2880, 1536)
-Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.01s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s

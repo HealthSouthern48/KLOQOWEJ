@@ -103,14 +103,16 @@ label pick_items:
                 jump checkout
 
             if len(cart) == 4:
-                s "Sorry, we're out of stock. Please come by later for more fresh produce."
+                s "Sorry, we're out of stock."
+                extend " Please come by later for more fresh produce."
                 jump checkout
 
             jump buy_groceries
         "No":
             if nothing:
                 if len(cart) == 4:
-                    s "Sorry, we're out of stock. Please come by later for more fresh produce."
+                    s "Sorry, we're out of stock."
+                    extend " Please come by later for more fresh produce."
                     jump checkout
 
                 s "Ok, then. Let's see what I can get you."
@@ -143,8 +145,8 @@ label checkout:
             s "Here's your change."
             $ amt -= cost
             "{i}The shopkeeper returns [amt:.2f] dollars to you.{/i}"
-        "Card":
-            "{i}You swipe the card at the POS terminal.{p}\nThe machine beeps and accepts your payment.{/i}"
+        "Credit Card":
+            "{i}You swipe the credit card at the POS terminal.{p}\nThe machine beeps and accepts your payment.{/i}"
 
     s "Here's your receipt."
 
