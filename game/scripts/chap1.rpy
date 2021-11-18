@@ -13,6 +13,7 @@ label at_shop:
     scene bg store
     show shopkeeper happy at left
 
+    # TODO: comment
     menu:
         s "{cps=0}How are you feeling, [name]?{/cps}"
 
@@ -34,6 +35,7 @@ label at_shop:
 label pick_items:
     hide shopkeeper happy
 
+    # TODO: comment
     menu buy_groceries:
         s "{cps=0}What [passed_say]can I get you today?{/cps}"
 
@@ -56,7 +58,8 @@ label pick_items:
 
     $ if len(cart) > 0: passed_say = "else "
 
-    menu last:
+    # TODO: comment
+    menu pickup_done:
         s "{cps=0}[last_say]{/cps}"
 
         "Yes":
@@ -104,6 +107,7 @@ label checkout:
         s "Here's your [item]. It costs [price:.2f] dollars."
         $ cost += stock[item]
 
+    # TODO: comment
     menu payment:
         s "In total, these cost [cost:.2f] dollars. Would you like to pay in cash, or with credit card?"
 
