@@ -1,4 +1,6 @@
-# chapter 1: Grocery Shopping
+# ----------------------------------------------------------------
+# CHAPTER 1: Grocery Shopping
+# ----------------------------------------------------------------
 label chapter_01:
     python:
         name = renpy.input("Hello, what is your name?").strip() or player_name
@@ -64,7 +66,7 @@ label pick_items:
                 if len(cart) == 0:
                     show shopkeeper happy at left
                     extend " See you later."
-                    jump end_chap1
+                    jump bye_chap1
 
                 jump checkout
 
@@ -117,11 +119,12 @@ label checkout:
     s "Here's your receipt."
 
 # end script for chapter 1
-label end_chap1:
+label bye_chap1:
     s "Have a nice day, [name]. {p}Come again!"
 
     hide shopkeeper happy
 
     "{b}{i}The End{/i}{/b}"
 
-    return
+# return to caller
+jump end_chap1

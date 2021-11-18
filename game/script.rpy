@@ -1,27 +1,15 @@
-# primary NPC to converse with
-define s = Character("Shopkeeper")
-
-# character definitions
-image shopkeeper happy:
-    # happy shopkeeper character
-    "s smile"
-    pause 4.75
-    "s blink"
-    pause 0.25
-    repeat
-
-image shopkeeper worry:
-    # worried shopkeeper character
-    "s concern"
-    pause 4.75
-    "s concern-blink"
-    pause 0.25
-    repeat
-
 # intro block
 label start:
     "Project KLOQOWEJ{p}\nby Isaiah, Jacob, Kyle, Naziya, Sheikh"
 
 # play chapter 1
 jump chapter_01
+label end_chap1
 
+# play chapter 2
+jump chapter_02
+label end_chap2
+
+# play chapter 3
+jump chapter_03
+label end_chap3
