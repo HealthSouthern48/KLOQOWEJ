@@ -10,6 +10,6 @@ errors.txt
 log.txt
 script.txt
 
-# compiled renpy scripts
+# renpy artifacts
 *.rpyc
 *.save
