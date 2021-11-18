@@ -1,7 +1,15 @@
+# ----------------------------------------------------------------
 # Files to be ignored by git
+# ----------------------------------------------------------------
+
+# misc.
+persistent
+
+# text files
 errors.txt
 log.txt
 script.txt
-minigame.rpy
+
+# compiled renpy scripts
 *.rpyc
 *.save
