@@ -1,6 +1,6 @@
 # Files to be ignored by git
+errors.txt
+log.txt
 script.txt
 minigame.rpy
 *.save
-errors.txt
-log.txt
