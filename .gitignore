@@ -3,4 +3,5 @@ errors.txt
 log.txt
 script.txt
 minigame.rpy
+*.rpyc
 *.save
