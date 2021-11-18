@@ -2,10 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 104: invalid syntax
-        s "Here's your [item]. It costs [stock[item]] dollars."
-                                                               ^
-    
+File "game/script.rpy", line 7: expected ':' not found.
+    label end_chap1
+                   ^
+
+File "game/script.rpy", line 11: expected ':' not found.
+    label end_chap2
+                   ^
+
+File "game/script.rpy", line 15: expected ':' not found.
+    label end_chap3
+                   ^
 
 Ren'Py Version: Ren'Py 7.4.9.2142
-Tue Oct 19 18:35:16 2021
+Thu Nov 18 01:26:58 2021
