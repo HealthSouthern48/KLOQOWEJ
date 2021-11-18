@@ -1,8 +1,9 @@
 # primary NPC to converse with
 define s = Character("Shopkeeper")
 
-# character animation
+# character definitions
 image shopkeeper happy:
+    # happy shopkeeper character
     "s smile"
     pause 4.75
     "s blink"
@@ -10,6 +11,7 @@ image shopkeeper happy:
     repeat
 
 image shopkeeper worry:
+    # worried shopkeeper character
     "s concern"
     pause 4.75
     "s concern-blink"
