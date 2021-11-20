@@ -39,24 +39,24 @@ label pick_items:
     menu buy_groceries:
         s "{cps=0}What [passed_say]can I get you today?{/cps}"
 
-        "Lettuce" if not lettuce:
+        "Lettuce" if not cart["lettuce"]:
             $ cart.append("lettuce")
-            $ lettuce = True
-        "Cucumber" if not cucumber:
+            $ cart["lettuce"] = True
+        "Cucumber" if not cart["cucumber"]:
             $ cart.append("cucumber")
-            $ cucumber = True
-        "Spinach" if not spinach:
+            $ cart["cucumber"] = True
+        "Spinach" if not cart["spinach"]:
             $ cart.append("spinach")
-            $ spinach = True
-        "Bread" if not bread:
+            $ cart["spinach"] = True
+        "Bread" if not cart["bread"]:
             $ cart.append("bread")
-            $ bread = True
+            $ cart["bread"] = True
         "Nothing":
             python:
                 nothing = True
                 last_say = "Are you sure?"
 
-    $ if len(cart) > 0: passed_say = "else "
+    $ if any(cart.values()): passed_say = "else "
 
     # TODO: comment
     menu pickup_done:
@@ -66,14 +66,14 @@ label pick_items:
             if nothing:
                 s "Ok, then."
 
-                if len(cart) == 0:
+                if not any(cart.values()):
                     show shopkeeper happy at left
                     extend " See you later."
                     jump bye_chap1
 
                 jump checkout
 
-            if len(cart) == 4:
+            if all(cart.values()):
                 s "Sorry, we're out of stock."
                 extend " Please come by later for more fresh produce."
                 jump checkout
@@ -81,7 +81,7 @@ label pick_items:
             jump buy_groceries
         "No":
             if nothing:
-                if len(cart) == 4:
+                if all(cart.values()):
                     s "Sorry, we're out of stock."
                     extend " Please come by later for more fresh produce."
                     jump checkout
@@ -101,8 +101,9 @@ label checkout:
     show shopkeeper happy at left
 
     $ cost = 0
-    while len(cart) > 0:
-        $ item = cart.pop(0)
+    $ shopping_cart = [item for item in cart.keys() if cart[item]]
+    while len(shopping_cart) > 0:
+        $ item = shopping_cart.pop(0)
         $ price = stock[item]
         s "Here's your [item]. It costs [price:.2f] dollars."
         $ cost += stock[item]
