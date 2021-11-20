@@ -40,16 +40,12 @@ label pick_items:
         s "{cps=0}What [passed_say]can I get you today?{/cps}"
 
         "Lettuce" if not cart["lettuce"]:
-            $ cart.append("lettuce")
             $ cart["lettuce"] = True
         "Cucumber" if not cart["cucumber"]:
-            $ cart.append("cucumber")
             $ cart["cucumber"] = True
         "Spinach" if not cart["spinach"]:
-            $ cart.append("spinach")
             $ cart["spinach"] = True
         "Bread" if not cart["bread"]:
-            $ cart.append("bread")
             $ cart["bread"] = True
         "Nothing":
             python:

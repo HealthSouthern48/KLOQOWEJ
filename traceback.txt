@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/scripts/chap1.rpy", line 43, in script
+    $ cart.append("lettuce")
+  File "game/scripts/chap1.rpy", line 43, in <module>
+    $ cart.append("lettuce")
+AttributeError: 'RevertableDict' object has no attribute 'append'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/scripts/chap1.rpy", line 43, in script
+    $ cart.append("lettuce")
+  File "/Applications/renpy-7.4.8-sdk/renpy/ast.py", line 928, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Applications/renpy-7.4.8-sdk/renpy/python.py", line 2245, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/scripts/chap1.rpy", line 43, in <module>
+    $ cart.append("lettuce")
+AttributeError: 'RevertableDict' object has no attribute 'append'
+
+Darwin-21.1.0-x86_64-i386-64bit
+Ren'Py 7.4.9.2142
+KLOQOWEJ 1.0
+Sat Nov 20 17:47:48 2021
