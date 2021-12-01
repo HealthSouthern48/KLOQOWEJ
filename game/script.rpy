@@ -1,6 +1,6 @@
 # intro block
 label start:
-    "Project KLOQOWEJ{p}\nby Isaiah, Jacob, Kyle, Naziya, Sheikh"
+    "Project Kwe'{p}\nby Isaiah, Jacob, Kyle, Naziya, Sheikh"
 
 # play chapter 1
 jump chapter_01
