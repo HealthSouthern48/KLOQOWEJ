@@ -1,6 +1,8 @@
+# =================================================================
 # file:         script.rpy
-# description: Main entry point of the game
-# author:      Sheikh Saad Abdullah (A00447871)
+# description:  Main entry point of the game
+# author:       Sheikh Saad Abdullah (A00447871)
+# =================================================================
 
 # intro block
 label start:
