@@ -1,3 +1,7 @@
+# file:         script.rpy
+# description: Main entry point of the game
+# author:      Sheikh Saad Abdullah (A00447871)
+
 # intro block
 label start:
     "Project Kwe'{p}\nby Isaiah, Jacob, Kyle, Naziya, Sheikh"
