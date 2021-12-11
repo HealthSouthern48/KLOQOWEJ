@@ -1,3 +1,9 @@
+# =================================================================
+# file:         script.rpy
+# description:  Main entry point of the game
+# author:       Sheikh Saad Abdullah (A00447871)
+# =================================================================
+
 # common defaults
 default player_name = "Player"
 
